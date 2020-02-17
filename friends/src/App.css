@@ -2,6 +2,46 @@
   text-align: center;
 }
 
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+a {
+  margin: 20px;
+}
+
+.friends {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.Button {
+  width: 120px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.item {
+  width: 300px;
+  height: 240px;
+  margin: 20px 0;
+  border: 1px solid gray;
+  padding: 20px 5px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,13 +66,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
