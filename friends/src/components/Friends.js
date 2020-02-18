@@ -10,7 +10,9 @@ import '../App.css';
 const Friends = () => {
 
   const [isLogginIn, setLoggingIn] = useState(true);
+  
   const [friends, setFriends] = useState([]);
+  
   const [newFriend, setNewFriend] = useState({
     name: "", 
     age: "",
@@ -75,7 +77,7 @@ const Friends = () => {
         <input
           type="text"
           name="name"
-          palceholder="name"
+          placeholder="name"
           value={newFriend.name}
           onChange={handleChange}
         />
@@ -83,7 +85,7 @@ const Friends = () => {
         <input
           type="text"
           name="age"
-          palceholder="age"
+          placeholder="age"
           value={newFriend.age}
           onChange={handleChange}
         />
@@ -91,7 +93,7 @@ const Friends = () => {
         <input
           type="email"
           name="email"
-          palceholder="email"
+          placeholder="email"
           value={newFriend.email}
           onChange={handleChange}
         />

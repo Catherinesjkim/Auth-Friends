@@ -1,7 +1,7 @@
 // Adds ability to edit individual friends
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import '../App.css'
 
@@ -62,7 +62,7 @@ const Item = (props) => {
       <h2>{props.friend.name}</h2>
       <p>age: {props.friend.age}</p>
       <p>email: {props.friend.email}</p>
-      <Link to={`friends/${props.friend.id}`}>Visit</Link>
+      {/* <Link to={`friends/${props.friend.id}`}>Visit</Link> */}
 
       {isEditing && (
         <form onSubmit={handleSubmit}>

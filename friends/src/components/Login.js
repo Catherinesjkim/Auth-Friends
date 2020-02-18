@@ -25,7 +25,7 @@ const Login = (props) => {
       .post("/login", credentials)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
-        this.props.history.push('/friends');
+        props.history.push('/friends');
       })
       .catch(err => {
         console.log('invalid login: ', err);
