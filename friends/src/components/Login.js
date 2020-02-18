@@ -28,13 +28,14 @@ const Login = (props) => {
         props.history.push('/friends');
       })
       .catch(err => {
+        localStorage.removeItem('token');
         console.log('invalid login: ', err);
       });
   };
 
     return (
-      <div>
-        <form onSubmit={handleSubmit}>
+      <div className="login-background">
+        <form className="login-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="username"

@@ -9,7 +9,7 @@ import '../App.css';
 
 const Friends = () => {
 
-  const [isLogginIn, setLoggingIn] = useState(true);
+  const [isLoggingIn, setLoggingIn] = useState(true);
   
   const [friends, setFriends] = useState([]);
   
@@ -18,9 +18,14 @@ const Friends = () => {
     age: "",
     email: ""
   });
+
   
   // fetch initial data - but it's protected! Use axiosWithAuth to send the token on the header of the request
   useEffect(() => {
+    // setLoggingIn(true);
+    // setTimeout(() => {
+    //   setLoggingIn(false);
+    // }, 3000);
     axiosWithAuth().get('/friends')
     .then(res => {
       console.log(res.data)
@@ -60,7 +65,7 @@ const Friends = () => {
     <div>
       <h1>Friends</h1>
         <div className="friends">
-          {isLogginIn ? (
+          {isLoggingIn ? (
             <Spinner />
           ) :
             (friends.map(friend => 
